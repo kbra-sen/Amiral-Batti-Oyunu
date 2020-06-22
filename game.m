@@ -8,7 +8,7 @@ end
 % oyuncunun oyun hakký
 rightToPlay=round((tableSize*tableSize)/3);
 % açýk tahtanýn tanýmlanmasý
-openTable=zeros(tableSize+1,tableSize+1);% +1  sebebi 1 den tableSizea kadar tablonun dýþ çerçevesinin oluþturulmasý(1 2 3 4 5 ..10)
+openTable=zeros(tableSize+1,tableSize+1);% +1  sebebi 1 den tablo boyutuna kadar tablonun dýþ çerçevesinin oluþturulmasý(1 2 3 4 5 ..10)
 % gizli tahtanýn tanýmlanmasý
 secretTable(tableSize+1,tableSize+1)='?';
 
@@ -17,7 +17,7 @@ rast=randi([0,1],1,1);
 
 
 %Gemi oluþturulmasý
-% Not : 2 den baþlatmamýn sebebi 1 den tableSizea kadar tablonun dýþ çerçevesinin oluþturulmasý(1 2 3 4 5 ..10)
+% Not : 2 den baþlatmamýn sebebi 1 den tablo boyutuna kadar tablonun dýþ çerçevesinin oluþturulmasý(1 2 3 4 5 ..10)
 fourthShip   = randi([2,tableSize-4+1],1,2); % 4 lük gemi için
 thirdShip    = randi([2,tableSize-3+1],1,2);% 3 lük gemi için
 secondShip   = randi([2,tableSize-2+1],1,2);% 2 lik gemi için
@@ -72,13 +72,13 @@ end
 
 
 %gizli tablonun oluþturulmasý
-% Not : 2 den baþlatmamýn sebebi 1 den tableSizea kadar tablonun dýþ çerçevesinin oluþturulmasý(1 2 3 4 5 ..10)
+% Not : 2 den baþlatmamýn sebebi 1 den tablo boyutuna kadar tablonun dýþ çerçevesinin oluþturulmasý(1 2 3 4 5 ..10)
 for i=2:tableSize+1
     for j=2:tableSize+1
         secretTable(i,j)='?';
     end
 end
-%1 den tableSizea kadar gizli tahtanýn dýþ çerçevesinin oluþturulmasý
+%1 den tablo boyutuna kadar gizli tahtanýn dýþ çerçevesinin oluþturulmasý
 for j=1:tableSize+1
     secretTable(j,1)='|';
     secretTable(1,j)='-';

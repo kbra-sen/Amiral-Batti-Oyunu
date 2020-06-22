@@ -1,7 +1,7 @@
 clc;
 result=game();
 if(result == 1)
-      oyna();
+      game();
 elseif(result == 0)
      fprintf('Oyun Sona Erdi.\n');
 elseif(result == 3)
